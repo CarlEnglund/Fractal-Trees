@@ -1,5 +1,4 @@
-window.onload = function() {
-
+window.setInterval(function() {
 	var canvas = document.getElementById("canvas"),
 		context = canvas.getContext("2d"),
 		width = canvas.width = window.innerWidth,
@@ -19,7 +18,9 @@ window.onload = function() {
 	trunkRatio = randomRange(0.25, 0.75);
 
 	function randomRange(min, max) {
+		
 		return min+ Math.random() * (max-min)
+
 	}
 
 	tree(p0, p1, 8);
@@ -64,5 +65,5 @@ window.onload = function() {
 			branchAngleA += randomRange(-0.02, 0.02);
 			branchAngleB += randomRange(-0.02, 0.02);
 			trunkRatio += randomRange(-0.02, 0.02);
-	}
-};
+		}
+}, 1000);
