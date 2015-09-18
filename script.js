@@ -1,4 +1,5 @@
 window.onload = function() {
+
 	var canvas = document.getElementById("canvas"),
 		context = canvas.getContext("2d"),
 		width = canvas.width = window.innerWidth,
@@ -12,6 +13,7 @@ window.onload = function() {
 		x: width / 2,
 		y: 50 
 	},
+
 	branchAngleA = randomRange(-Math.PI / 2, Math.PI / 2),
 	branchAngleB = randomRange(-Math.PI / 2, Math.PI / 2),
 	trunkRatio = randomRange(0.25, 0.75);
@@ -50,6 +52,7 @@ window.onload = function() {
 				tree(pA, pC, limit-1);
 				tree(pA, pB, limit-1);
 			}
+			
 			else {
 				context.beginPath();
 				context.moveTo(pB.x, pB.y);
