@@ -66,4 +66,4 @@ window.setInterval(function() {
 			branchAngleB += randomRange(-0.02, 0.02);
 			trunkRatio += randomRange(-0.02, 0.02);
 		}
-}, 1000);
+}, 3000);
